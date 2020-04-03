@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Search</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/query-builder.default.min.css">
-    <link rel="stylesheet" href="css/select2-bootstrap.min.css">
-    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vue.js"></script>
 </head>
@@ -22,12 +21,51 @@
             <button class="btn btn-warning" id="btn-reset" v-on:click="reset()">Reset</button>
             <button class="btn btn-success" id="btn-set" v-on:click="search()">Search</button>
         </div>
+
+        <div class="alert alert-danger mt-5" role="alert" v-if="error.length > 0">
+            {{error}}
+        </div>
+
+        <div class="row">
+
+            <div class="card-deck mt-5" v-for="m in movies.movies">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" v-bind:src="m.poster_path" alt="Card image cap">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="progress yellow">
+                                    <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                                    </span>
+                                    <div class="progress-value"><b>{{m.vote_average * 10}}</b> <small>%</small></div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h5 class="card-title">{{m.title}}</h5>
+                                <p class="card-text">{{m.release_date}}</p>
+                            </div>
+                        </div>
+
+                        <p class="card-text mt-3">{{m.overview}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a v-bind:href="m.more_info" class="pull-right" target="_blank">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="js/select2.min.js"></script>
+    <script src="js/interact.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/query-builder.standalone.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

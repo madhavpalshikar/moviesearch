@@ -1,3 +1,6 @@
+const service_url = 'https://us-east-1.websolr.com/solr/e74f806321cd/select?wt=json&q=';
+const image_url = 'https://image.tmdb.org/t/p/w220_and_h330_face/';
+const info_url = 'https://www.themoviedb.org/movie/';
 const genres = [];
 genres[28] = "Action";
 genres[12] = "Adventure";
@@ -19,4 +22,4 @@ genres[53] = "Thriller";
 genres[10752] = "War";
 genres[37] = "Western";
 
-exports.genres;
+module.exports = { service_url: service_url, image_url: image_url, info_url: info_url, genres: genres };
