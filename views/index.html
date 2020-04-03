@@ -26,6 +26,10 @@
             {{error}}
         </div>
 
+        <div class="alert alert-success mt-5" role="alert" v-if="movies">
+            Total {{movies.numFound}} movies found.
+        </div>
+
         <div class="row">
 
             <div class="card-deck mt-5" v-for="m in movies.movies">
