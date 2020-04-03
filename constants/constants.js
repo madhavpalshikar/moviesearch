@@ -1,0 +1,22 @@
+const genres = [];
+genres[28] = "Action";
+genres[12] = "Adventure";
+genres[16] = "Animation";
+genres[35] = "Comedy";
+genres[80] = "Crime";
+genres[99] = "Documentary";
+genres[18] = "Drama";
+genres[10751] = "Family";
+genres[14] = "Fantasy";
+genres[36] = "History";
+genres[27] = "Horror";
+genres[10402] = "Music";
+genres[9648] = "Mystery";
+genres[10749] = "Romance";
+genres[878] = "Science Fiction";
+genres[10770] = "TV Movie";
+genres[53] = "Thriller";
+genres[10752] = "War";
+genres[37] = "Western";
+
+exports.genres;

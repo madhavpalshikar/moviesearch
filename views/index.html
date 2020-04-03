@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="css/select2-bootstrap.min.css">
     <link rel="stylesheet" href="css/select2.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/vue.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Movie Search</h1>
+    <div class="container" id="searchApp">
+        <h1>{{title}}</h1>
         <div id="builder"></div>
         <div class="btn-group">
-            <button class="btn btn-warning" id="btn-reset">Reset</button>
-            <button class="btn btn-success" id="btn-set">Set rules</button>
-            <button class="btn btn-primary" id="btn-get">Get rules</button>
+            <button class="btn btn-warning" id="btn-reset" v-on:click="reset()">Reset</button>
+            <button class="btn btn-success" id="btn-set" v-on:click="search()">Search</button>
         </div>
     </div>
     <script src="js/jquery.js"></script>
@@ -30,5 +30,4 @@
     <script src="js/query-builder.standalone.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>
