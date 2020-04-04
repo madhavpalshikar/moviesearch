@@ -1,17 +1,17 @@
-#Movie Search App
+# Movie Search App
 -------------------
 
-##Run:
+## Run:
     npm start
 
-##Tests:
+## Tests:
     npm run test
 
 
-##Run With Docker Container:
+## Run With Docker Container:
 ---------------------------------------------
-##Build:
+## Build:
     docker build -t search-app:latest .
 
-##Start Container:
+## Start Container:
     docker run -d -p 3000:3000 search-app:latest
