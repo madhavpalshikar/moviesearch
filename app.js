@@ -12,7 +12,6 @@ app.get('/', (req, res) => {
 
 app.post('/search',(req,res)=>{
     let response = service.getSearchResults(req.body.solrQuery);
-    console.log(response);
     response.then(function (result) {
             let movies = service.cleanData(result.data);
             res.json({ status: 200, result: movies });
@@ -30,3 +29,5 @@ app.listen(3000, (err)=>{
 
     console.log('Server started on port 3000');
 })
+
+module.exports = app;
