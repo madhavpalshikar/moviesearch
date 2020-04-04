@@ -4,6 +4,7 @@
   "description": "Movie Search",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "mocha tests/*.js --exit"
   },
   "author": "Madhav Palshikar",
